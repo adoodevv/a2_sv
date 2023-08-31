@@ -2,44 +2,47 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-  }
-  
-  .chat-container {
-    max-width: 400px;
+    background: linear-gradient(76deg,#4bc195,#4c19c9,#6907f2,#187b6c,#253be4,#b2d972);
+    background-size: 360% 360%;
+    animation: gradient-animation 24s ease infinite;
+    height: 100vh;
+}
+
+.chat-container {
+    max-width: 450px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-  }
-  
-  .chat-history {
-    height: 300px;
+}
+
+.chat-history {
+    height: 350px;
     overflow-y: auto;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
     font-size: 15px;
-  }
-  
-  .message {
+}
+
+.message {
     margin: 5px 0;
-  }
-  
-  .user-input-container {
+}
+
+.user-input-container {
     display: flex;
     margin-top: 10px;
-  }
-  
-  #user-input {
+}
+
+#user-input {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 15px;
-  }
-  
-  #send-btn {
+}
+
+#send-btn {
     padding: 8px 15px;
     background-color: #007bff;
     border: none;
@@ -47,5 +50,17 @@ body {
     border-radius: 15px;
     cursor: pointer;
     margin-left: 10px;
-  }
+}
+
+@keyframes gradient-animation {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
   
