@@ -3,7 +3,7 @@ const userInput = document.getElementById('user-input');
 const sendBtn = document.getElementById('send-btn');
 
 sendBtn.addEventListener('click', () => {
-    const message = userInput.ariaValueText;
+    const message = userInput.value;
     displayMessage('You', message);
 
     //API call and AI response handling
