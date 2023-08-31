@@ -20,6 +20,7 @@ body {
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 5px;
+    font-size: 15px;
   }
   
   .message {
@@ -35,7 +36,7 @@ body {
     flex: 1;
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
   }
   
   #send-btn {
@@ -43,7 +44,7 @@ body {
     background-color: #007bff;
     border: none;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     margin-left: 10px;
   }
