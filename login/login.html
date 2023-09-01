@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>wazaa login</title>
     <link rel="stylesheet" href="login-style.css">
 </head>
 <body>
     <div class="container">
-        <form class="login-form">
+        <form class="login-form" onsubmit="return checkCredentials();">
+            <i class="fa-solid fa-user"></i>
             <h2>Login</h2>
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -18,7 +20,7 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit" onclick="checkCredentials()">Login</button>
+            <button type="submit">Login</button>
             <p>Not a user?<a href="signup.html"> Sign up </a></p>
         </form>
     </div>
@@ -31,7 +33,7 @@
             const validPassword = "12345";
 
             if (username === validUsername && password === validPassword) {
-                window.location.href = "chatbot.html";
+                window.location.href = "signup.html";
             } else {
                 alert("Invalid credentials. Please try again.");
             }
