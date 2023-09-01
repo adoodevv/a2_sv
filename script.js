@@ -12,25 +12,27 @@ inputForm.addEventListener('submit', function(event) {
   // Get user input
   const input = inputField.value;
 
-  // Clear input field
-  inputField.value = '';
-  const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" });
+  if (input !== "") {
+    // Clear input field
+    inputField.value = '';
+    const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" });
 
-  // Add user input to conversation
-  let message = document.createElement('div');
-  message.classList.add('chatbot-message', 'user-message');
-  message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${input}</p>`;
-  conversation.appendChild(message);
+    // Add user input to conversation
+    let message = document.createElement('div');
+    message.classList.add('chatbot-message', 'user-message');
+    message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${input}</p>`;
+    conversation.appendChild(message);
 
-  // Generate chatbot response
-  const response = generateResponse(input);
+    // Generate chatbot response
+    const response = generateResponse(input);
 
-  // Add chatbot response to conversation
-  message = document.createElement('div');
-  message.classList.add('chatbot-message','chatbot');
-  message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${response}</p>`;
-  conversation.appendChild(message);
-  message.scrollIntoView({behavior: "smooth"});
+    // Add chatbot response to conversation
+    message = document.createElement('div');
+    message.classList.add('chatbot-message','chatbot');
+    message.innerHTML = `<p class="chatbot-text" sentTime="${currentTime}">${response}</p>`;
+    conversation.appendChild(message);
+    message.scrollIntoView({behavior: "smooth"});
+  }
 });
 
 // Generate chatbot response function
@@ -55,3 +57,44 @@ function generateResponse(input) {
     return responses[Math.floor(Math.random() * responses.length)];
   }
   
+// Dropdown menu
+const dropdownContent = document.getElementById("dropdown-content");
+const menuIcon = document.getElementById("menu");
+
+// Function to toggle the dropdown menu
+function toggleDropdown() {
+    dropdownContent.classList.toggle("show");
+}
+
+// Event listener to toggle the dropdown menu when the menu icon is clicked
+menuIcon.addEventListener("click", toggleDropdown);
+
+// Event listener to hide the dropdown menu when clicking outside of it
+document.addEventListener("click", function (event) {
+    if (!menuIcon.contains(event.target) && !dropdownContent.contains(event.target)) {
+        dropdownContent.classList.remove("show");
+    }
+});
+
+function clearChat() {
+    document.getElementById("conversation").innerHTML = "";
+}
+
+function saveChat() {
+    const chatContent = document.getElementById("conversation").innerHTML;
+    const chatTitle = prompt("Enter a title for this chat:");
+    if (chatTitle) {
+        const savedChats = document.querySelector(".saved-chats");
+        const chatEntry = document.createElement("div");
+        chatEntry.classList.add("chat-entry");
+        chatEntry.innerHTML = `<h5>${chatTitle}</h5>${chatContent}`;
+        savedChats.appendChild(chatEntry);
+    }
+}
+
+// Event listeners for "Clear Chat" and "Save Chat"
+document.getElementById("clear-chat").addEventListener("click", clearChat);
+dropdownContent.classList.remove("show");
+
+document.getElementById("save-chat").addEventListener("click", saveChat);
+dropdownContent.classList.remove("show");

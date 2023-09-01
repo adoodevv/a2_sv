@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="style.css">
     <title>Wazaa Chatbot</title>
 </head>
-<body>
 
+<body>
   <div class="main-container">
     <div class="side-panel">
       <div class="user-profile">
         <i class="fa-solid fa-circle-user"></i>
-        <h3>@wazaa</h3>
+        <h3>wazaa</h3>
       </div>
       <div class="saved-chats">
-        <h4>Saved Chats</h4>
+        <h4>Saved Chats <i class="fa-solid fa-folder-open"></i></h4>
       </div>
       <div class="premium">
         <p><i class="fa-solid fa-star"></i><a style="text-decoration: none;" href="premium.html">Subscribe to Premium</a></p>
@@ -30,6 +30,15 @@
             <i class="fa-solid fa-robot"></i>
           </div>
           <h2>wazaa</h2>
+          <div class="dropdown">
+            <div id="menu" class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown-content" id="dropdown-content">
+                <a href="#" id="clear-chat">Clear Chat</a>
+                <a href="#" id="save-chat">Save Chat</a>
+            </div>
+        </div>
         </div>
         <div id="chatbot">
             <div id="conversation">
