@@ -24,6 +24,7 @@
     </div>
     <script>
         function checkCredentials() {
+            console.log("checkCredentials function called");
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
 
@@ -31,9 +32,11 @@
             const validPassword = "12345";
 
             if (username === validUsername && password === validPassword) {
-                window.location.href = "signup.html";
+                window.open("../chatbot.html", "_self");
+                return false;
             } else {
                 alert("Invalid credentials. Please try again.");
+                return false;
             }
         }
     </script>
