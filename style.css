@@ -1,14 +1,29 @@
 body {
     display: flex;
     justify-content: center;
+    background: linear-gradient(304deg,#4eae3d,#f9befb,#cffda8);
+    background-size: 240% 240%;
+    animation: gradient-animation 16s ease infinite;
 }
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
 .chatbot-container {
     width: 500px;
     margin: 0 auto;
     background-color: #f5f5f5;
     border: 1px solid #cccccc;
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
@@ -16,15 +31,18 @@ body {
     background-color: #f5f5f5;
     border: 1px solid #eef1f5;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
+    border-radius: 15px;
   }
   
   #header {
     background-color: darkslategrey;
     color: #ffffff;
-    padding: 20px;
+    padding: 10px;
     font-size: 1em;
     font-weight: bold;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
   }
 
   message-container {
@@ -32,6 +50,7 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
+    border-radius: 15px;
   }
   
   
@@ -91,7 +110,7 @@ body {
     flex: 1;
     height: 60px;
     border: 1px solid #eef1f5;
-    border-radius: 4px;
+    border-radius: 15px;
     padding: 0 10px;
     font-size: 14px;
     transition: border-color 0.3s;
@@ -101,7 +120,7 @@ body {
   }
 
   .send-icon {
-    margin-right: 10px;
+    margin-right: 30px;
     cursor: pointer;
   }
   
@@ -113,6 +132,7 @@ body {
   #submit-button {
     background-color: transparent;
     border: none;
+    margin-right: 15px;
   }
 
   p[sentTime]:hover::after {    
@@ -133,7 +153,7 @@ body {
 
   /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   
   /* Track */
