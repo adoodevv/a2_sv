@@ -41,8 +41,10 @@ body {
     font-size: 1em;
     font-weight: bold;
     border-radius: 15px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
 
   message-container {
@@ -60,6 +62,7 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    max-width: 470px;
   }
 
   @keyframes message-fade-in {
