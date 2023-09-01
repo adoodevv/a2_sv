@@ -76,7 +76,7 @@ body {
 }
 
 button {
-    background-color: rgba(173,216,230, 0.3);
+    background-color: rgba(173,216,230, 0.5);
     border: none;
     border-radius: 15px;
     padding: 10px 20px;
