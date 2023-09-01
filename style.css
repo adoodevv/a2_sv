@@ -1,6 +1,7 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(304deg,#4eae3d,#f9befb,#cffda8);
     background-size: 240% 240%;
     animation: gradient-animation 16s ease infinite;
@@ -80,7 +81,7 @@ body {
     display: flex;
     align-items: flex-start;
     position: relative;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     border-radius: 20px;
     word-wrap: break-word;
@@ -114,6 +115,7 @@ body {
     height: 60px;
     border: 1px solid #eef1f5;
     border-radius: 15px;
+    margin-left: 10px;
     padding: 0 10px;
     font-size: 14px;
     transition: border-color 0.3s;
@@ -136,6 +138,7 @@ body {
     background-color: transparent;
     border: none;
     margin-right: 15px;
+    color: darkslategrey;
   }
 
   p[sentTime]:hover::after {    
