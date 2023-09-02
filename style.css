@@ -299,8 +299,9 @@ p[sentTime]:hover::after {
     left: 20px;
 }
 
-.sign-out i {
-    margin-right: 5px;
+.sign-out a {
+    color: #f0f0f0;
+    margin-left: 5px;
 }
 
 /* Dropdown Menu Styles */
