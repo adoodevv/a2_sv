@@ -98,3 +98,40 @@ dropdownContent.classList.remove("show");
 
 document.getElementById("save-chat").addEventListener("click", saveChat);
 dropdownContent.classList.remove("show");
+
+// Function to create and animate random icons
+function createRandomIcon() {
+    const icon = document.createElement("i");
+    const iconsContainer = document.getElementById("background-icons");
+    
+    const iconClasses = ["fa-book-open", "fa-square-root-variable", "fa-microscope", "fa-wave-square", "fa-robot"];
+    const randomIconClass = iconClasses[Math.floor(Math.random() * iconClasses.length)];
+
+    icon.className = "fas " + randomIconClass;
+    iconsContainer.appendChild(icon);
+
+    // Randomize icon position, size, rotation, and animation
+    const posX = Math.random() * window.innerWidth;
+    const posY = Math.random() * window.innerHeight;
+    const size = 16 + Math.random() * 24 + "px"; // Random icon size
+    const rotation = Math.random() * 360 + "deg"; // Random rotation
+    const animationDuration = 5 + Math.random() * 10 + "s"; // Random animation duration
+
+    icon.style.position = "absolute";
+    icon.style.left = posX + "px";
+    icon.style.top = posY + "px";
+    icon.style.fontSize = size;
+    icon.style.color = "#333";
+    icon.style.transform = "rotate(" + rotation + ")";
+    icon.style.animation = "moveIcon " + animationDuration + " linear infinite";
+
+}
+
+// Create initial random icons
+for (let i = 0; i < 20; i++) {
+    createRandomIcon();
+}
+
+
+
+
