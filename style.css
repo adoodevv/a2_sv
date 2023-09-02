@@ -275,13 +275,32 @@ p[sentTime]:hover::after {
     justify-content: center;
     margin-bottom: 50px;
     position: absolute;
-    bottom: 20px;
+    bottom: 80px;
     left: 20px;
 }
 
 .premium a{
     color: #f0f0f0;
-    margin-left: 10px;
+    margin-left: 5px;
+}
+
+.sign-out{
+    background-color: #383838;
+    color: #f0f0f0;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+}
+
+.sign-out i {
+    margin-right: 5px;
 }
 
 /* Dropdown Menu Styles */
