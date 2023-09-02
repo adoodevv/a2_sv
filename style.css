@@ -278,6 +278,12 @@ p[sentTime]:hover::after {
     text-decoration: none;
     display: block;
     color: #333;
+    border-radius: 5px;
+}
+
+.dropdown-content i {
+    margin-right: 12px;
+    font-size: 20px;
 }
 
 .dropdown-content a:hover {
